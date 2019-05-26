@@ -2,24 +2,25 @@
 
 A command line interface to the DUNE Collaboration database information.
 
-* Why
+* Who
 
-Because the official web app is horrific.
+DUNE collaborators.
 
 * What
 
 Download the ~users.csv~ and do things with it.
 
-* Who
 
-You'll need to credentials to download the dump file.
+* Why
+
+Because the official web app is horrific.
+
 
 * Example
 
 You can use the ~dune-folk~ CLI to search a saved ~users.csv~ file and have the search results output in various formats including Gmail and Outlook CSV.  Arbitrary formats may be constructed by providing a format template on the command line.
 
 #+BEGIN_EXAMPLE
-  $ dune-folk search -o gmail.csv -e gmail email=.*bnl.gov users.csv
   $ dune-folk search -o gmail.csv -e gmail email=.*bnl.gov users.csv
   $ dune-folk search  first=Brett users.csv  
   Brett Viren bv@bnl.gov
@@ -31,9 +32,9 @@ You can use the ~dune-folk~ CLI to search a saved ~users.csv~ file and have the 
 
 ** BBDB
 
-Do you use BBDB?  Of course you do.  You can use ~dune-folk~ to import addresses to BBDB.  Here's how 
+Do you use BBDB?  Of course you do.  You can use ~dune-folk~ to import addresses to BBDB using [[https://gitlab.com/iankelling/bbdb-csv-import][bbdb-csv-import]].  Here's how 
 
-1. export a serarch to ~gmail~ CSV format as in the above example
+1. export with the ~search~ command to a ~gmail~ CSV format as in the above example
 2. ~M-x package-install bbdb-csv-import~
 3. ~M-x bbdb-csv-import file~
 4. Select the CSV file exported above
