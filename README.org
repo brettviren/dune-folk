@@ -1,0 +1,19 @@
+#+title: DUNE Folk
+
+A command line interface to the DUNE Collaboration database information.
+
+* Why
+
+Because the official web app is horrific.
+
+* What
+
+Download the ~users.csv~ and do things with it.
+
+* Who
+
+You'll need to credentials to download the dump file.
+
+* Details
+
+
