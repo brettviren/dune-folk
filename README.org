@@ -14,6 +14,30 @@ Download the ~users.csv~ and do things with it.
 
 You'll need to credentials to download the dump file.
 
-* Details
+* Example
 
+You can use the ~dune-folk~ CLI to search a saved ~users.csv~ file and have the search results output in various formats including Gmail and Outlook CSV.  Arbitrary formats may be constructed by providing a format template on the command line.
+
+#+BEGIN_EXAMPLE
+  $ dune-folk search -o gmail.csv -e gmail email=.*bnl.gov users.csv
+  $ dune-folk search -o gmail.csv -e gmail email=.*bnl.gov users.csv
+  $ dune-folk search  first=Brett users.csv  
+  Brett Viren bv@bnl.gov
+  $ dune-folk search -o alldune.csv -e gmail users.csv  
+  "Viren, Brett <bv@bnl.gov>"
+#+END_EXAMPLE
+
+* Tips
+
+** BBDB
+
+Do you use BBDB?  Of course you do.  You can use ~dune-folk~ to import addresses to BBDB.  Here's how 
+
+1. export a serarch to ~gmail~ CSV format as in the above example
+2. ~M-x package-install bbdb-csv-import~
+3. ~M-x bbdb-csv-import file~
+4. Select the CSV file exported above
+5. Save your newly updated BBDB
+
+Note, the importing will skip any new entries that match an existing entry. 
 
